@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx:*)",
+      "Bash(rm:*)",
+      "Bash(npm install)",
+      "Bash(eas build:*)",
+      "WebFetch(domain:expo.dev)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -1,29 +1,57 @@
 {
   "expo": {
-    "name": "warikan",
-    "slug": "warikan",
+    "name": "シェア勘",
+    "slug": "warikan-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
+    "newArchEnabled": false,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#6B8E6B"
     },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.kitamurastudio.warikan",
+      "buildNumber": "6",
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app uses the camera to scan QR codes for joining expense groups.",
+        "NSPhotoLibraryUsageDescription": "This app may save QR codes to your photo library for sharing.",
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#6B8E6B"
       },
-      "edgeToEdgeEnabled": true
+      "package": "com.kitamurastudio.warikan",
+      "versionCode": 1,
+      "permissions": [
+        "android.permission.CAMERA"
+      ]
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "This app uses the camera to scan QR codes for joining expense groups."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "4dc5347f-cff7-43bc-a2a7-3e2a6fcdaa21"
+      }
     }
   }
 }
